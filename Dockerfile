@@ -18,7 +18,7 @@ FROM base AS api
 WORKDIR /app
 
 COPY --from=build /prod/api /app
-COPY --from=build /app/.git /app/.git
+# COPY --from=build /app/.git /app/.git
 
 EXPOSE 9000
 CMD [ "node", "src/cobalt" ]
